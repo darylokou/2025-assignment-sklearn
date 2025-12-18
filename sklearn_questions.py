@@ -84,7 +84,6 @@ class KNearestNeighbors(ClassifierMixin, BaseEstimator):
         self : instance of KNearestNeighbors
             The current instance of the classifier
         """
-
         X, y = validate_data(self, X, y)
         self.X_train_ = X
         self.y_train_ = y
@@ -163,7 +162,6 @@ class MonthlySplit(BaseCrossValidator):
         Accepts pandas DataFrame or Series. Raises ValueError if the resolved
         column/index is not datetime-like.
         """
-
         if isinstance(X, pd.DataFrame):
             idx_source = X.index if self.time_col == "index"\
                                  else X[self.time_col]
